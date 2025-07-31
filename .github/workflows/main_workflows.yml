@@ -3,9 +3,13 @@ name: Main_workflows
 
 # 워크 플로우의 특징 정의
 on:
-  pull_request:
-    branches:
-      - develop
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '배포 환경'
+        required: true
+        default: 'staging'
+
 
 jobs:
   test:
