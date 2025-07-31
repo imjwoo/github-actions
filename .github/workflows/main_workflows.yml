@@ -1,10 +1,11 @@
 #워크 플로의 이르 지정
 name: Main_workflows
 
+# 워크 플로우의 특징 정의
 on:
-  push:
+  pull_request:
     branches:
-      - main
+      - develop
 
 jobs:
   test:
